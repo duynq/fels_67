@@ -1,0 +1,15 @@
+<% provide :title, t("all_categories") %>
+<h1><%= t("all_categories") %></h1>
+
+<%= will_paginate %>
+
+<ul>
+  <% @categories.each do |category| %>
+    <li>
+      <%= link_to category.name, category %>
+      <%= link_to image_for(category, 150, 300), category %>
+    </li>
+  <% end %>
+</ul>
+
+<%= will_paginate %>
