@@ -21,6 +21,26 @@ class CategoriesController < ApplicationController
     end
   end
 
+  def edit
+    @category = Category.find params[:id]
+  end
+
+  def update
+    @category = Category.find params[:id]
+    if @category.update_attributes category_params
+      flash[:success] = I18n.t "category_updated"
+      redirect_to @category
+    else
+      render "edit"
+    end
+  end
+
+  def destroy
+    Category.find(params[:id]).destroy
+    flash[:success] = I18n.t "category_deleted"
+    redirect_to categories_url
+  end
+
   private
   def category_params
     params.require(:category).permit :name, :image
