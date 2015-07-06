@@ -2,7 +2,6 @@ en:
   framgia: Framgia E-Learning
   home: Home
   help: Help
-  login: Log in
   about: About
   contact: Contact
   the: The
@@ -10,13 +9,22 @@ en:
   news: News
   home_welcome: This is the home page for the Framgia E-Learning System 
   author: Framgia
+
   signup: Sign up now!
   signup_success: Sign up success
   confirmation: Confirmation
   create_my_account: Create my account
+
   category: Category
   new_category: New category
   create_category: Create category
   category_success: Category created
   all_categories: All categories
 
+  new_user: New user?
+  invalid_user: Invalid Email or Password
+  login: Log in
+  logout: Log out
+  profile: Profile
+  setting: Setting 
+  users: Users
