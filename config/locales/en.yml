@@ -45,11 +45,12 @@ en:
   users: Users
   remember_me: Remember me on this computer
 
-
   edit_user: Edit user
   update_profile: Update your profile
   save_changes: Save changes
   update_success: Update success
   change: Change
   please_log_in: Please log in
+
+  all_users: All users
 
