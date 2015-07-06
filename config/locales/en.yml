@@ -10,6 +10,7 @@ en:
   news: News
   home_welcome: This is the home page for the Framgia E-Learning System 
   author: Framgia
+  
   signup: Sign up now!
   signup_success: Sign up success
   confirmation: Confirmation
@@ -19,6 +20,7 @@ en:
   create_category: Create category
   category_success: Category created
   all_categories: All categories
+
   edit_category: Edit category
   save_changes: Save changes
   delete: delete
@@ -26,8 +28,20 @@ en:
   category_updated: Category updated
   edit: edit
   confirm: You sure?
+
   word: Word
   new_word: New Word
   create_word: Create word
   word_success: Word created
   answers: Answers
+
+  new_user: New user?
+  invalid_user: Invalid Email or Password
+  login: Log in
+  logout: Log out
+  profile: Profile
+  setting: Setting 
+  users: Users
+  remember_me: Remember me on this computer
+
+
