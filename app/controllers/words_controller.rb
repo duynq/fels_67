@@ -1,4 +1,4 @@
-class WordsController < ApplicationController
+  class WordsController < ApplicationController
   def new
     @word = Word.new
     4.times do
@@ -13,6 +13,20 @@ class WordsController < ApplicationController
       redirect_to @word
     else
       render "new"
+    end
+  end
+
+  def edit
+    @word = Word.find params[:id]
+  end
+
+  def update
+    @word = Word.find params[:id]
+    if @word.update_attributes word_params
+      flash[:success] = I18n.t "word_updated"
+      redirect_to @word
+    else
+      render "edit"
     end
   end
 

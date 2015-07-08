@@ -34,7 +34,8 @@ en:
   create_word: Create word
   word_success: Word created
   answers: Answers
-
+  word_updated: Word updated
+  
   new_user: New user?
   invalid_user: Invalid Email or Password
   login: Log in
