@@ -1,4 +1,4 @@
-  class WordsController < ApplicationController
+class WordsController < ApplicationController
   def new
     @word = Word.new
     4.times do
