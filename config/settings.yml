@@ -6,3 +6,6 @@ size_picture_small: 50
 height_picture_category: 180
 width_picture_category: 270
 categories_per_page: 3
+follow_type:
+  - followers
+  - following

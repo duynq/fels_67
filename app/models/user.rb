@@ -21,8 +21,9 @@ class User < ActiveRecord::Base
   has_secure_password
   validates :password, presence: true, length: {minimum: Settings.minimum_password_length}, allow_nil: true
 
-  scope :list_lesson, ->user{Lesson.where "user_id = ?", user.id}
- 
+  scope :list_lesson, ->user{Lesson.where "user_id IN (SELECT followed_id FROM relationships
+    WHERE  follower_id = :user_id) OR user_id = :user_id", user_id: user.id}
+   
   def User.digest string
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
                                                   BCrypt::Engine.cost
@@ -46,5 +47,17 @@ class User < ActiveRecord::Base
   def authenticated? remember_token
     return false if remember_digest.nil?
     BCrypt::Password.new(remember_digest).is_password? remember_token
+  end
+
+  def follow other_user
+    active_relationships.create followed_id: other_user.id
+  end
+
+  def unfollow other_user
+    active_relationships.find_by(followed_id: other_user.id).destroy
+  end
+
+  def following? other_user
+    following.include? other_user
   end
 end
