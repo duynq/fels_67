@@ -1,0 +1,9 @@
+<div class="row" style="vertical-align: middle;">
+  <div class="col-md-2">
+    <%= gravatar_for lesson.user, Settings.size_picture_small %>
+  </div>
+  <div class="col-md-8">
+  	<%= lesson.user.name %> <%= t "learned" %> <%= lesson.category.name %> - 
+  	(<%= lesson.created_at.day %>/<%= lesson.created_at.month %>/<%= lesson.created_at.year %>)
+  </div>
+</div>
