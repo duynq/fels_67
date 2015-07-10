@@ -1,0 +1,15 @@
+<% provide :title, t("lesson") %>
+<h1><%= @lesson.category.name %></h1>
+<%= form_for @lesson do |f| %>
+  <ol>
+    <% @lesson.results.each do |result| %>
+      <li>
+        <%= result.word.content %>
+        <% result.word.answers.each do |answer| %>        
+          <%= answer.content if answer.status %>
+        <% end %>
+        <%= result.status %>
+      </li>
+    <% end %>
+  </ol>
+<% end %>

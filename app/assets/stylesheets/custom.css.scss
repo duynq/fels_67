@@ -251,3 +251,19 @@ span.picture {
     border: 0;
   }
 }
+
+li {
+  input {
+    border: 1px solid #bbb;
+    width: 0%;
+    margin-bottom: 15px;
+  }
+}
+
+ul {
+  list-style-type: none;
+}
+
+#lesson_id {
+  display: none;
+}

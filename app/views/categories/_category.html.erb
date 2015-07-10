@@ -21,7 +21,7 @@
     </start>
 
     <start class="col-md-3 col-md-offset-9">
-      <%= link_to t("start"), "#", class: "btn btn-primary" %>
+      <%= link_to t("start"), lessons_path(category_id: category.id), method: :post, class: "btn btn-primary" %>
     </start>
   </part>
 </div>

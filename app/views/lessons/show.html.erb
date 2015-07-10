@@ -1,0 +1,20 @@
+<% provide :title, t("lesson") %>
+<h1><%= @lesson.category.name %></h1>
+<%= form_for @lesson do |f| %>
+  <ol>
+    <%= f.fields_for :results do |builder| %>
+      <li>
+        <%= builder.object.word.content %>
+          <ul>
+          <% builder.object.word.answers.each do |answer| %>
+            <li>
+              <%= builder.radio_button :status, answer.status %>
+              <%= answer.content%>
+            </li>
+          <% end %>
+          </ul>
+      </li>
+    <% end %>
+  </ol>
+  <%= f.submit t("finish"), class: "btn btn-primary", method: :post %>
+<% end %>
