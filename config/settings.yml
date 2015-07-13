@@ -3,3 +3,6 @@ maximum_email_length: 255
 minimum_password_length: 6
 size_picture: 100
 size_picture_small: 50
+height_picture_category: 180
+width_picture_category: 270
+categories_per_page: 3

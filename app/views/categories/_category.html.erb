@@ -1,0 +1,29 @@
+<div class="row">
+  <part class="col-md-4 col-md-offset-2">
+    <%= image_for category, Settings.height_picture_category, Settings.width_picture_category %>
+  </part>
+
+  <part class="col-md-4"> 
+    <start class="col-md-12">
+      <h3><%= link_to category.name, category %></h3> 
+    </start>
+
+    <% if current_user.admin? %>
+      <start class="col-md-12">    
+        <%= link_to t("edit"), edit_category_path(category) %>
+        <%= link_to t("delete"), category, method: :delete,
+                          data: { confirm: t("confirm") } %>
+      </start>
+    <% end %>
+
+    <start class="col-md-12">
+      <%= t("you_have_learned") %>
+    </start>
+
+    <start class="col-md-3 col-md-offset-9">
+      <%= link_to t("start"), "#", class: "btn btn-primary" %>
+    </start>
+  </part>
+</div>
+
+

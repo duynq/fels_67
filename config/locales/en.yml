@@ -23,10 +23,9 @@ en:
 
   edit_category: Edit category
   save_changes: Save changes
-  delete: delete
   category_deleted: Category deleted
   category_updated: Category updated
-  edit: edit
+  edit: Edit
   confirm: You sure?
 
   word: Word
@@ -60,3 +59,10 @@ en:
 
   activities: Activities
   learned: learned 20 words in Lesson
+  view_my_profile: view my profile
+  
+  word: Word
+  lesson: Lesson
+
+  start: Start
+  you_have_learned: You've learned

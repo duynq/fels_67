@@ -20,6 +20,8 @@ class User < ActiveRecord::Base
                     uniqueness: {case_sensitive: false}
   has_secure_password
   validates :password, presence: true, length: {minimum: Settings.minimum_password_length}, allow_nil: true
+
+  scope :list_lesson, ->user{Lesson.where "user_id = ?", user.id}
  
   def User.digest string
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
