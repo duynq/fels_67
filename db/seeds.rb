@@ -24,3 +24,10 @@ users = User.order(:created_at).take(6)
   category_id = rand(1..5)
   users.each { |user| user.lessons.create!(category_id: category_id) }
 end
+
+users = User.all
+user  = users.first
+following = users[2..50]
+followers = users[3..40]
+following.each { |followed| user.follow(followed) }
+followers.each { |follower| follower.follow(user) }
